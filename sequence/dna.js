@@ -3,6 +3,8 @@
  */
 'use strict';
 
+// import {Sequence} from './sequence';
+
 const Sequence = require('./sequence');
 
 const Bases = {
@@ -72,6 +74,7 @@ class DNA extends Sequence {
   }
 }
 
+// export {DNA};
 
 if (typeof module !== 'undefined' && module.parent) {
   module.exports = DNA;

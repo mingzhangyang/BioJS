@@ -83,6 +83,8 @@ class Sequence {
   }
 }
 
+// export {Sequence}
+
 if (typeof module !== 'undefined' && module.parent) {
   module.exports = Sequence;
 } else {
