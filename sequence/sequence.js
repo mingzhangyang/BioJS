@@ -39,6 +39,10 @@ class Sequence {
     return res;
   }
 
+  uniq() {
+    return [...new Set(this.sequence)]
+  }
+
   getSeq() {
     return this.sequence;
   }
