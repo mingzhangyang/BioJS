@@ -52,6 +52,27 @@ class Sequence {
     return this.sequence.search(str) !== -1;
   }
 
+  range(a, b=0) {
+    if (a > this.sequence.length) {
+      throw new Error("start index too large")
+    } else if (a < -this.sequence.length) {
+      throw new Error("start index too small")
+    } else if (a < 0) {
+      a += this.sequence.length;
+    }
+    if (b > this.sequence.length) {
+      throw new Error("end index too large")
+    } else if (b < -this.sequence.length) {
+      throw new Error("end index too small")
+    } else if (b <= 0) {
+      b += this.sequence.length;
+    }
+    if (b < a) {
+      throw new Error("start index is greater than end index")
+    }
+    return this.sequence.slice(a, b)
+  }
+
   saveToFile(targetDir='./', fileName='mySequence.txt') {
     let name = this.name ? `${this.name}.txt` : fileName;
     fs.createWriteStream(targetDir + name, 'binary').end(this.sequence);
