@@ -1,5 +1,5 @@
-# BioGo
-Golang package for Biology
+# BioJS
+NodeJS executables for Biology
 
 - sequence
   - DNA
