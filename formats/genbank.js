@@ -35,6 +35,11 @@ function parseGenBankFile(arr) {
     holder.name = head;
     holder.data = [body];
   }
+
+  if (holder.name) {
+    res.push(transform(holder));
+  }
+
   return res;
 }
 
